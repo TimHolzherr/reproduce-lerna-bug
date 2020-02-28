@@ -1,0 +1,26 @@
+{
+  "name": "reproduce-lerna-bug",
+  "version": "1.0.0",
+  "description": "Repository to reproduce a windows specific bug of lerna 3.16.2 and above",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "rimraf foo/node_modules && rimraf bar/node_modules && rimraf yarn.lock && rimraf node_modules",
+    "test-binary-symlink": "path-exists bar/node_modules/.bin/foo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimHolzherr/reproduce-lerna-bug.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimHolzherr/reproduce-lerna-bug/issues"
+  },
+  "homepage": "https://github.com/TimHolzherr/reproduce-lerna-bug#readme",
+  "devDependencies": {
+    "lerna": "3.16.2",
+    "path-exists-cli": "^1.0.0",
+    "rimraf": "3.0.2"
+  }
+}
